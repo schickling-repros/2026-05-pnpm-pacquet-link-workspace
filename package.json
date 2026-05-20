@@ -1,0 +1,8 @@
+{
+  "name": "pnpm-pacquet-link-workspace-repro",
+  "private": true,
+  "packageManager": "pnpm@11.2.0",
+  "scripts": {
+    "repro": "pnpm install --frozen-lockfile --ignore-scripts"
+  }
+}

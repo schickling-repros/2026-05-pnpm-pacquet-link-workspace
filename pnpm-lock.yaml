@@ -1,0 +1,113 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies:
+      '@pnpm/pacquet':
+        specifier: 0.2.2-11
+        version: 0.2.2-11
+
+packages:
+
+  '@pacquet/darwin-arm64@0.2.2-11':
+    resolution: {integrity: sha512-dilvI/rnqV75Ru97vZ7gjoqY7B8t/HZuX3kNiYKH7SUR8qj2n7BwT8yq8zW7gRr8ZekxLaQ6rfapbWgF7uvSDw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@pacquet/darwin-x64@0.2.2-11':
+    resolution: {integrity: sha512-6eoup3R3bG4Skhs5hSvCT5OwSWTXvr/gzJEB8mqYQAiV3F+YyL8aG7jVCYsY4kgDqPOX0J8mN6igMqj00rV2Lg==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@pacquet/linux-arm64@0.2.2-11':
+    resolution: {integrity: sha512-GjphusAKSg+cXbMzNVXK7KOvCsfACHto2WREzDPc3R55qeihuXaS8HOYjI1MSpDqUKqHljUZlKuGvjfCEZR1PA==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@pacquet/linux-x64@0.2.2-11':
+    resolution: {integrity: sha512-9f718XH9EDErRiK3vZcvv2R8W1O05PZ6ymAsY2lpK4BBEDYgGlcc4G73m594DNnnG7zWuawwCtoXG0J3zdzswQ==}
+    cpu: [x64]
+    os: [linux]
+
+  '@pacquet/win32-arm64@0.2.2-11':
+    resolution: {integrity: sha512-OuMpQNQ/jCiCkTftJEujrbIgUll3qQRB2RbNqiOXEseS3l5IUQtyRStP5iOKzvkFkDE7Qv0xnXZdlewc7OEL7g==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@pacquet/win32-x64@0.2.2-11':
+    resolution: {integrity: sha512-AmBZthoZ04RgkdMJ5/2TGxckvevEmVDO22tdcOdheOTYVU66aXuhvQJkp6ExICstFrh9v5i5V+4BxjpOD1mmhA==}
+    cpu: [x64]
+    os: [win32]
+
+  '@pnpm/pacquet@0.2.2-11':
+    resolution: {integrity: sha512-SAVtwWQbHCDYA1nrTbw9IZWn6/5Q117WykUWqWLXqmaa2kEYdtY1tuYTbtbcLw2vel1DiabzTXVnclmpbm6wIQ==}
+
+snapshots:
+
+  '@pacquet/darwin-arm64@0.2.2-11':
+    optional: true
+
+  '@pacquet/darwin-x64@0.2.2-11':
+    optional: true
+
+  '@pacquet/linux-arm64@0.2.2-11':
+    optional: true
+
+  '@pacquet/linux-x64@0.2.2-11':
+    optional: true
+
+  '@pacquet/win32-arm64@0.2.2-11':
+    optional: true
+
+  '@pacquet/win32-x64@0.2.2-11':
+    optional: true
+
+  '@pnpm/pacquet@0.2.2-11':
+    optionalDependencies:
+      '@pacquet/darwin-arm64': 0.2.2-11
+      '@pacquet/darwin-x64': 0.2.2-11
+      '@pacquet/linux-arm64': 0.2.2-11
+      '@pacquet/linux-x64': 0.2.2-11
+      '@pacquet/win32-arm64': 0.2.2-11
+      '@pacquet/win32-x64': 0.2.2-11
+
+---
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/a:
+    dependencies:
+      b:
+        specifier: workspace:^
+        version: file:packages/b
+    dependenciesMeta:
+      b:
+        injected: true
+
+  packages/b:
+    dependencies:
+      c:
+        specifier: workspace:^
+        version: link:../c
+
+  packages/c: {}
+
+packages:
+
+  b@file:packages/b:
+    resolution: {directory: packages/b, type: directory}
+
+snapshots:
+
+  b@file:packages/b:
+    dependencies:
+      c: link:packages/c
