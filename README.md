@@ -36,4 +36,4 @@ Failed to parse the version part: Failed to parse version.
 
 ## Related Issue
 
-TBD
+https://github.com/pnpm/pnpm/issues/11775
